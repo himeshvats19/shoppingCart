@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, BrowserRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import './App.scss'
 
@@ -55,6 +55,7 @@ class App extends React.Component{
   render(){
     return (
       <Router>
+        <BrowserRouter basename="/shoppingCart" />
         <div className="App">
         <Route path="/" exact render = { (props) => 
         <React.Fragment>
