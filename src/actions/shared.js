@@ -3,7 +3,7 @@ import { addToCart, removeFromCart, subtractItemFromCart } from './cartItems'
 
 const API_URL = 'https://api.myjson.com/bins/qzuzi'
 
-export function handleInitialLoad (sortByID = 'lowToHigh', filterValue = 1000) {
+export function handleInitialLoad (sortByID, filterValue) {
     return (dispatch) => {
       return fetch(API_URL)
         .then(status)
