@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/shoppingCart/static/css/main.debc7af1.chunk.css",
-    "main.js": "/shoppingCart/static/js/main.e4255938.chunk.js",
-    "main.js.map": "/shoppingCart/static/js/main.e4255938.chunk.js.map",
+    "main.css": "/shoppingCart/static/css/main.acdfbf96.chunk.css",
+    "main.js": "/shoppingCart/static/js/main.1be1290e.chunk.js",
+    "main.js.map": "/shoppingCart/static/js/main.1be1290e.chunk.js.map",
     "runtime-main.js": "/shoppingCart/static/js/runtime-main.8b307f2b.js",
     "runtime-main.js.map": "/shoppingCart/static/js/runtime-main.8b307f2b.js.map",
-    "static/js/2.5f055a0b.chunk.js": "/shoppingCart/static/js/2.5f055a0b.chunk.js",
-    "static/js/2.5f055a0b.chunk.js.map": "/shoppingCart/static/js/2.5f055a0b.chunk.js.map",
+    "static/js/2.cc31590d.chunk.js": "/shoppingCart/static/js/2.cc31590d.chunk.js",
+    "static/js/2.cc31590d.chunk.js.map": "/shoppingCart/static/js/2.cc31590d.chunk.js.map",
     "index.html": "/shoppingCart/index.html",
-    "precache-manifest.2b558d00b0e485159b60439f378b168a.js": "/shoppingCart/precache-manifest.2b558d00b0e485159b60439f378b168a.js",
+    "precache-manifest.412a5be36b604fe9c4aaf81505bef7de.js": "/shoppingCart/precache-manifest.412a5be36b604fe9c4aaf81505bef7de.js",
     "service-worker.js": "/shoppingCart/service-worker.js",
-    "static/css/main.debc7af1.chunk.css.map": "/shoppingCart/static/css/main.debc7af1.chunk.css.map",
-    "static/js/2.5f055a0b.chunk.js.LICENSE.txt": "/shoppingCart/static/js/2.5f055a0b.chunk.js.LICENSE.txt"
+    "static/css/main.acdfbf96.chunk.css.map": "/shoppingCart/static/css/main.acdfbf96.chunk.css.map",
+    "static/js/2.cc31590d.chunk.js.LICENSE.txt": "/shoppingCart/static/js/2.cc31590d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8b307f2b.js",
-    "static/js/2.5f055a0b.chunk.js",
-    "static/css/main.debc7af1.chunk.css",
-    "static/js/main.e4255938.chunk.js"
+    "static/js/2.cc31590d.chunk.js",
+    "static/css/main.acdfbf96.chunk.css",
+    "static/js/main.1be1290e.chunk.js"
   ]
 }
