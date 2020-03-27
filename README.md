@@ -12,6 +12,9 @@ To install dependencies
 Runs the app in the development mode.<br />
 Open [http://localhost:3000/shoppingCart](http://localhost:3000/shoppingCart) to view it in the browser.
 
+OR you can check here : 
+https://himeshvats19.github.io/shoppingCart/
+
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
