@@ -10,6 +10,8 @@ export default class Sort extends Component {
                 <span>Sort By</span>
                <button value='highToLow' onClick={this.handleSort} className="btn">Price -- High -> Low</button>
                <button value='lowToHigh' onClick={this.handleSort} className="btn">Price -- Low -> High</button>
+               <button value='discount' onClick={this.handleSort} className="btn">Discount</button>
+               <button onClick={this.props.clearFilters}>Clear Filters</button>
             </div>
         )
     }

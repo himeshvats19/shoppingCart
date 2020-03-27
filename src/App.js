@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import './App.scss'
 
@@ -19,7 +19,8 @@ class App extends React.Component{
     super();
     this.state = {
       sortByID : 'lowToHigh',
-      filterValue: 1000
+      filterValue: 1000,
+      searchValue: ''
     }
   }
   componentDidMount() {
@@ -51,33 +52,49 @@ class App extends React.Component{
         this.state.filterValue
         ));
   }
+  clearFilters = () => {
+    this.setState({
+      sortByID : 'lowToHigh',
+      filterValue: 1000
+    })
+  this.props.dispatch(handleInitialLoad('lowToHigh', 1000));
+  }
+
+  searchQuery = (searchValue) => {
+    this.setState({
+      searchValue: searchValue
+    });
+    this.props.dispatch(
+      handleInitialLoad(
+        this.state.sortByID, 
+        this.state.filterValue,
+        searchValue
+        ));
+  }
 
   render(){
     return (
       <Router>
         <div className="App">
-        <Route path="/" exact render = { (props) => 
+        <Route path="/shoppingCart" exact render = { (props) => 
         <React.Fragment>
-         <Header/> 
+         <Header searchQuery={this.searchQuery}/> 
          <div className="container">
              <div className="col-2">
-               <Filter setFilter={this.setFilter}/>
+               <Filter filterValue={this.state.filterValue} setFilter={this.setFilter}/>
              </div>
              <div className="col-10">
-               <Sort sortBy={this.setSortedBy}/>
+               <Sort sortBy={this.setSortedBy} clearFilters={this.clearFilters}/>
                <ItemList items={this.props.items}></ItemList>
              </div>
          </div>
          </React.Fragment>
         }/>
-         <Route path="/checkout" render = { (props) => 
+         <Route path="/shoppingCart/checkout" render = { (props) => 
           <div className="checkout">
             <React.Fragment>
               <Header/>
               <div className="container">
-              <Link to={{
-                pathname: '/',
-                 }}> <p>Back</p> </Link>
                   <div className="col-10">
                     <CartList/>
                   </div>

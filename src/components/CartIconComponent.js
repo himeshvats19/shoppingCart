@@ -16,7 +16,7 @@ class CartIconComponent extends Component {
           
             <div className="shopping-cart">
                   <Link to={{
-                pathname: '/checkout',
+                pathname: '/shoppingCart/checkout',
                  }}> 
                 <FontAwesomeIcon icon={faShoppingCart} />
                 <span className="cart-count">{cartSize}</span>

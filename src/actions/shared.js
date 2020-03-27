@@ -3,7 +3,7 @@ import { addToCart, removeFromCart, subtractItemFromCart } from './cartItems'
 
 const API_URL = 'https://api.myjson.com/bins/qzuzi'
 
-export function handleInitialLoad (sortByID, filterValue) {
+export function handleInitialLoad (sortByID, filterValue, searchValue = '') {
     return (dispatch) => {
       return fetch(API_URL)
         .then(status)
@@ -13,12 +13,21 @@ export function handleInitialLoad (sortByID, filterValue) {
             data.sort(function(a, b){
               return a.price-b.price;
             });
-          }else{
+          }else if(sortByID === 'highToLow'){
             data.sort(function(a, b){
               return b.price-a.price;
             });
+          }else{
+            data.sort(function(a, b){
+              return a.discount-b.discount;
+            });
           }
           data = data.filter(item => item.price < filterValue)
+          if(searchValue.length > 0){
+            data = data.filter(item => {
+              return item.name.toLowerCase() === searchValue
+            })
+          }
             dispatch(getAllItems(data))
 
         }).catch(function(error) {
