@@ -252,3 +252,14 @@ ul li {
       }
     }
 }
+@keyframes loadpulse {
+  0% {
+  background-color: #DADADA;
+  }
+  100% {
+  background-color: #F4F4F4;
+  }
+}
+.loading {
+  animation: loadpulse .65s infinite alternate;
+}

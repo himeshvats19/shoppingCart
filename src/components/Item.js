@@ -10,7 +10,7 @@ class Item extends Component {
         const { item } = this.props
         return (
            <div>
-               <img src={item.img_url} alt={item.name}/>
+               <img className="loading" src={item.img_url} alt={item.name}/>
                <h3 className="item-title">{item.name}</h3>
                <div className="item-details">
                     <span className="item-price">Rs {parseFloat(item.price - (item.price * item.discount/100))} <strike>{item.price}</strike></span>
